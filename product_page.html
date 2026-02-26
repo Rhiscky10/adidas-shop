@@ -1,0 +1,2170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIN ADIDAS PROJECT</title>
+    <link href="//db.onlinewebfonts.com/c/c0cd6ec8ce6d2bbd315a13b62ed13550?family=AdihausDIN" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://www.adidas.co.in/glass/react/16d1049/assets/img/icon-adidas-logo.svg" type="image/x-icon">
+
+    <style>
+        * {
+            font-family: "AdihausDIN", Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            margin: 0px;
+        }
+
+        #topHeader {
+            display: flex;
+            background-color: black;
+            color: white;
+            height: 30px;
+            flex-grow: 0px;
+            overflow: hidden;
+        }
+
+        #topHeader div {
+            margin: 0.5% 0% 0% 15%;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        #header {
+            display: flex;
+            height: 80px;
+            border-bottom: 1px solid #eaebec;
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .adidasLogo {
+            width: 70px;
+            margin-top: 15px;
+            margin-left: 50px;
+            cursor: pointer;
+        }
+
+        #rightSideBox {
+            height: 100%;
+            width: 10%;
+            margin-top: 0.5%;
+            margin-left: 80%;
+        }
+
+        #rightSideBox>a>button {
+            margin-left: 1%;
+            background-color: white;
+            border: 0px solid white;
+            color: black;
+        }
+
+        #rightSideBox>a>button:hover {
+            cursor: pointer;
+        }
+
+        #rightSideBox>p {
+            margin-top: 5%;
+            margin-left: 50%;
+        }
+
+        #parent {
+            display: grid;
+            gap: 3px;
+            grid-template-columns: 24.8% 24.8% 24.8% 24.8%;
+            justify-content: center;
+            min-height: 300px;
+
+        }
+
+        .adjustement {
+            max-width: 1250px;
+            margin: auto;
+        }
+
+        img {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        #productHeading {
+            letter-spacing: -4px;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 42px;
+        }
+
+        #totalProductsCount {
+            letter-spacing: 4px;
+            color: #767677;
+            font-size: 15px;
+            font-style: normal;
+            margin-left: 15px;
+        }
+
+        #footer {
+            background-color: #363738;
+            font-style: normal;
+            color: #C8CBCC;
+            height: 110px;
+            margin-top: 10px;
+            font-size: 12px;
+            border: 1px solid #363738;
+        }
+
+        #footer>p:first-child {
+            display: inline-block;
+            margin: 0% 0% 2% 16%;
+        }
+
+        #footer>p:nth-child(2) {
+            display: inline-block;
+            margin: 1% 0% 2% 45%;
+        }
+
+        #footer>p:last-child {
+            margin: 0% 0% 2% 16%;
+        }
+
+        .buttonsDiv {
+            /* position: fixed; */
+            top: 10px;
+            border-top: 1px solid #eaebec;
+            border-bottom: 1px solid #eaebec;
+            margin-bottom: 10px;
+            /* background-color: red; */
+
+        }
+
+        .filterButtons {
+            padding: 12px;
+            margin: 5px;
+            font-size: 15px;
+            background-color: white;
+            border: none;
+
+        }
+
+        .filterButtons:hover {
+            border: 1px solid black;
+        }
+
+        #parent>div:hover {
+            border: 1px solid black;
+        }
+
+        .priceDisplay {
+            margin: 1px auto 1px 10px;
+            font-size: 14px;
+        }
+
+        .nameSection {
+            margin: 1px auto 1px 10px;
+            font-size: 14px;
+        }
+
+        .categorySection {
+            margin: 1px auto 1px 10px;
+            font-size: 12px;
+            color: #767677;
+        }
+
+        .colorSection {
+            margin: 1px auto 1px 10px;
+            font-size: 14px;
+            color: #767677;
+        }
+
+        a {
+            color: black;
+        }
+
+        .adjustement>a>span {
+            font-size: 15px;
+            padding: 8px 5px;
+            margin-left: 10px;
+
+        }
+
+        .adjustement>a:first-child>span {
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .adjustement>a>span:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .hearderSlideContent {
+            margin: 10px auto;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: white;
+        }
+
+        @media(max-width: 960px) {
+            #parent {
+                grid-template-columns: 32% 32% 32%;
+            }
+
+            .buttonsDiv {
+                display: grid;
+                grid-template-columns: 24% 24% 24% 24%;
+                border-top: 1px solid black;
+                border-bottom: 1px solid black;
+            }
+
+            .filterButtons {
+                padding: 5px;
+                margin: 2px;
+                font-size: 13px;
+            }
+
+            .nameSection {
+                font-size: 12px;
+            }
+
+            .categorySection {
+                font-size: 11px;
+            }
+
+            .colorSection {
+                font-size: 12px;
+            }
+
+            #productHeading {
+                font-size: 32px;
+                margin-left: 2%;
+            }
+
+            #rightSideBox {
+                margin-left: 70%;
+            }
+
+
+            #footer>p:first-child {
+                visibility: hidden;
+            }
+
+            #footer>p:nth-child(2) {
+                display: block;
+                text-align: center;
+                margin: 0px auto 25px;
+            }
+
+            #footer>p:last-child {
+                text-align: center;
+                display: block;
+                margin: auto;
+            }
+
+            #topHeader>div {
+                display: none;
+            }
+
+        }
+
+        @media(max-width: 600px) {
+            #rightSideBox {
+                width: 30%;
+                margin-left: 50%;
+            }
+        }
+
+        @media(max-width: 400px) {
+            #parent {
+                grid-template-columns: 48% 48%;
+            }
+
+            .buttonsDiv {
+                display: grid;
+                grid-template-columns: 32% 32% 32%;
+            }
+
+            #rightSideBox {
+                width: 100%;
+                margin-left: 35%;
+            }
+
+            #rightSideBox>a>button {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="topHeader">
+        <div>FREE DELIVERY FOR ALL ORDERS NOW</div>
+        <div>FREE RETURNS</div>
+        <div>SIGN UP & GET 15% OFF</div>
+    </div>
+
+    <div id="header">
+        <div>
+            <a href="adidas_home_page.html"><img class="adidasLogo" src="https://cdn.britannica.com/94/193794-050-0FB7060D/Adidas-logo.jpg"></a>
+
+        </div>
+        <div id="rightSideBox">
+            <a href="signup.html"><button>sign up</button></a>
+            <a href="adidas_checkOutPage.html"><button>log in</button></a>
+            <p>
+                <i class="material-icons">shopping_bag</i>
+            </p>
+        </div>
+    </div>
+
+    <div class="adjustement">
+
+        <a href="adidas_home_page.html"><span><i class="fa fa-long-arrow-left"></i>&nbsp; &nbsp;BACK</span></a>
+        <a href="adidas_home_page.html"><span>Home</span></a>
+
+
+        <h1 id="productHeading">ALL PRODUCTS<span id="totalProductsCount"></span></h1>
+
+        <div class="buttonsDiv">
+
+            <select name="gender" id="genderFilter" onclick="showGender()" class="filterButtons">
+                <option value="default"> GENDER</option>
+                <option value="men">MEN</option>
+                <option value="women">WOMEN</option>
+                <option value="kids">KIDS</option>
+            </select>
+
+            <select name="division" id="divisionFilter" onclick="showDivision()" class="filterButtons">
+                <option value="default"> DIVISION</option>
+                <option value="clothing">CLOTHING</option>
+                <option value="shoes">SHOES</option>
+                <option value="accessories">ACCESSORIES</option>
+            </select>
+
+            <select name="productType" id="productType" onclick="showProductType()" class="filterButtons">
+                <option value="default"> PRODUCT TYPE</option>
+                <option value="sneakers">SNEAKERS</option>
+                <option value="football">FOOTBALL</option>
+                <option value="sportsShoes">SPORTS SHOES</option>
+                <option value="Tshirts">T-SHIRTS</option>
+                <option value="sportsWear">SPORTS WEAR</option>
+            </select>
+
+            <select name="brand" id="brand" onclick="showBrand()" class="filterButtons">
+                <option value="default">BRAND</option>
+                <option value="performance">PERFORMANCE</option>
+                <option value="originals">ORIGINALS</option>
+                <option value="sportsInspired">SPORTS INSPIRED</option>
+                <option value="sportsWear">SPORTS WEAR</option>
+            </select>
+
+            <select name="collection" id="collection" onclick="showCollection()" class="filterButtons">
+                <option value="default">COLLECTION</option>
+                <option value="clima">CLIMA</option>
+                <option value="adicolor">ADICOLOR</option>
+                <option value="ultraBoost">ULTRA BOOST</option>
+                <option value="superNova">SUPER NOVA</option>
+            </select>
+
+            <select name="sustainability" id="sustainability" onclick="showSustainability()" class="filterButtons">
+                <option value="default">SUSTAINABILITY</option>
+                <option value="sustainable">SUSTAINABLE</option>
+                <option value="vegan">VEGAN</option>
+                <option value="organicCotton">ORGANIC COTTON</option>
+                <option value="colorWithCare">COLOR WITH CARE</option>
+            </select>
+
+            <select name="price" id="priceFilter" onclick="priceSortFilter()" class="filterButtons">
+                <option value="default">PRICE</option>
+                <option value="low" class="filterButtons">(Low - High)</option>
+                <option value="high" class="filterButtons">(High - Low)</option>
+            </select>
+
+
+            <button onclick="clearFilter()" class="filterButtons">CLEAR FILTER</button>
+        </div>
+    </div>
+
+    <div id="parent" class="adjustement"></div>
+
+    <footer>
+        <div id="footer">
+            <p>Adidas Ghana, Madina</p>
+            <p>Privacy Policy &nbsp; &nbsp; | &nbsp; &nbsp; Terms and Conditions &nbsp; &nbsp; | &nbsp; &nbsp; Cookies</p>
+            <p>© 2023 Group 9</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+<script>
+
+    let data = [
+        //Men's cloths T-shirts
+        {
+            img: [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/bb6c451b27e445ae9321ac84017e14f6_9366/AEROREADY_Designed_to_Move_Sport_Tee_Black_GR0514_01_laydown.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/2c85e9d1d9454031a185ac850002c58a_9366/AEROREADY_Designed_to_Move_Feelready_Sport_Tee_White_GT5558_01_laydown.jpg",
+                "https://www.sportspower.com.au/cdn/shop/products/GT5552_adidasMAEROREADYDesigned2MoveFeelreadySportTee_1.png?v=1630404182",
+                "https://en-sa.sssports.com/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dwd41f5b22/sss/SSS2/A/D/G/M/2/SSS2_ADGM2097_4064044188779_1.jpg?sw=700&sh=700&sm=fit",
+            ],
+            name: "AEROREADY DESIGNED TO MOVE SPORT TEE",
+            category: "Men Training",
+            price: 65.00,
+            size: [32, 34, 36, 38],
+            color: [
+                "Scarlet",
+                "Red",
+                "White",
+            ],
+            rating: 4.0,
+            specifications: [
+                "Drawcord on elastic waist",
+                "100% recycled polyester doubleknit",
+                "Stay-put running shorts",
+                "Color: Scarlet / Red / Black"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "1 N",
+                "Gender", "Men",
+                "Country of Origin", "Thailand"
+            ],
+            gender: "men",
+            division: "clothing",
+            productType: "Tshirts",
+            brand: "performance",
+            collection: "superNova",
+            sustainability: "organicCotton",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/6cd762be35d2447da0cdab6500fe30e0_9366/ADI_RUNNER_TEE_Black_FM7637.jpg",
+                "https://upload.cc/i1/2021/06/04/RNFj2H.jpg",
+                "https://m.media-amazon.com/images/I/61iNEWgT3SL._AC_UY580_.jpg",
+                "https://i.ebayimg.com/images/g/KFAAAOSwKQhg4uOw/s-l1200.webp",
+            ],
+            name: "RUNNER TEE",
+            category: "Men Training",
+            price: 65.00,
+            size: [32, 34, 36, 38],
+            color: [
+                "Royal Blue",
+            ],
+            rating: 4.2,
+            specifications: [
+                "Crewneck",
+                "Jacquard",
+                "100% recycled polyester",
+                "Color: Royal Blue"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "1 N",
+                "Gender", "Men",
+                "Country of Origin", "Vietnam"
+            ],
+            gender: "men",
+            division: "clothing",
+            productType: "Tshirts",
+            brand: "sportsWear",
+            collection: "adicolor",
+            sustainability: "colorWithCare",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/07230cda78ab4808a35cad5f010cc23b_9366/Tennis_Primeblue_Freelift_Printed_Tee_Turquoise_GT7817_01_laydown.jpg",
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/db0a261448d84c5c9ae0ad27006c51a9_9366/Tennis_Primeblue_Freelift_Printed_Tee_Green_H31121_21_model.jpg",
+                "https://www.mistertennis.com/images/2020_12-media/adidas-freelift-primeblue-maglietta-da-tennis-uomo-crew-navy-gq2220-K.jpg",
+                "https://img.tennisonly.com.au/watermark/rs.php?path=ASPBFC-YE-3.jpg&nw=455",
+            ],
+            name: "TENNIS FREELIFT PRINTED PRIMEBLUE TEE",
+            category: "Men Tennis",
+            price: 65.00,
+            size: [32, 34, 36, 38],
+            color: [
+                "Acid Yellow",
+                "Wild Pine",
+                "White",
+            ],
+            rating: 4.5,
+            specifications: [
+                "Slim fit",
+                "Engineered for movement",
+                "Doubleknit",
+                "Color: Acid Yellow / Wild Pine / White"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "1 N",
+                "Gender", "Men",
+                "Country of Origin", "Thailand"
+            ],
+            gender: "men",
+            division: "clothing",
+            productType: "Tshirts",
+            brand: "sportsWear",
+            collection: "clima",
+            sustainability: "sustainable",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/w_940,f_auto,q_auto/9a55e527ccdf468b8470ae690130b9dc_9366/H39900_01_laydown.jpg",
+                "https://images.asos-media.com/products/adidas-football-fc-bayern-munich-jersey-t-shirt-in-black/204976004-1-black?$n_750w$&wid=750&hei=750&fit=crop",
+                "https://images.footballfanatics.com/bayern-munich/fc-bayern-adidas-training-t-shirt-black_ss5_p-13375724+pv-2+u-pms398lhqphfgrnfab3z+v-y4peqtwqtcuc1qjminho.jpg?_hv=2&w=900",
+                "https://classicshirts.co.za/cdn/shop/products/image_ccab030c-8091-4804-b2da-bf79c764455d.jpg?v=1660215501&width=1445",
+            ],
+            name: "FC BAYERN TEE",
+            category: "Men Tennis",
+            price: 110.00,
+            size: [32, 34, 36, 38],
+            color: [
+                "Dash Grey",
+            ],
+            rating: 3.8,
+            specifications: [
+                "Slim fit",
+                "Engineered for movement",
+                "Doubleknit",
+                "Color: Dash Grey"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "1 N",
+                "Gender", "Men",
+                "Country of Origin", "Cambodia"
+            ],
+            gender: "men",
+            division: "clothing",
+            productType: "Tshirts",
+            brand: "performance",
+            collection: "adicolor",
+            sustainability: "vegan",
+        },
+
+        // Women cloths
+        {
+            img: [
+                "https://product-images.21run.com/product/1/d/4/8/1d4845b36b5f3ed732d7f7b264c50aac94839801_Afbeeldingen_FastImpact_Luxe_Run_High_Support_Beha_Zwart_HA0071_01_laydown.jpeg?auto=compress&fill=solid&fill-color=ffffff&fit=fillmax&h=1250&w=1250&s=70f4e5f06d400f183156d9ff5efaf6b2",
+                "https://ean-images.booztcdn.com/adidas/1300x1700/adigp6780_cblack_10.jpg",
+                "https://images.asos-media.com/products/adidas-training-split-strap-high-support-sports-bra-in-black/200969949-1-black?$n_640w$&wid=513&fit=constrain",
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/67f8aafee57844c0b85aac5500d041af_9366/TruePace_High_Support_Bra_Black_FU0275_01_laydown.jpg",
+            ],
+            name: "HIGH-SUPPORT BRA",
+            category: "Women Originals",
+            price: 80.00,
+            size: [32, 34, 36, 38],
+            color: [
+                "Black",
+                "Dark Blue"
+            ],
+            rating: 4.9,
+            specifications: [
+                "High support with a compression fit",
+                "Pullover design with scoop neck",
+                "Non-removable foam padding",
+                "Color: Black / Dark Blue"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "1 N",
+                "Gender", "Women",
+                "Country of Origin", "Vietnam"
+            ],
+            gender: "women",
+            division: "clothing",
+            productType: "sportsWear",
+            brand: "performance",
+            collection: "adicolor",
+            sustainability: "organicCotton",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/132e295fadd0454287a8aa9c010a1b68_9366/Ultimate_Bra_Black_FJ7283_01_laydown.jpg",
+                "https://image.s5a.com/is/image/TheBay/4efcec4dd5c849a3904bf0f1647a8266?wid=480&hei=640&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0",
+                "https://i.ebayimg.com/images/g/bJkAAOSwPxNgiyDj/s-l1200.webp",
+                "https://i.pinimg.com/736x/19/3e/8f/193e8fcce92914af3dbcd46f7e26b1a7.jpg",
+            ],
+            name: "ULTIMATE BRA",
+            category: "Women Originals",
+            price: 80.00,
+            size: [32, 34, 36, 38],
+            color: [
+                "Black",
+            ],
+            rating: 4.6,
+            specifications: [
+                "High support with a compression fit",
+                "Round neck",
+                "Non-removable foam padding",
+                "Color: Black"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "1 N",
+                "Gender", "Women",
+                "Country of Origin", "Vietnam"
+            ],
+            gender: "women",
+            division: "clothing",
+            productType: "sportsWear",
+            brand: "originals",
+            collection: "ultraBoost",
+            sustainability: "colorWithCare",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/f5e9cb0edf36463a8fe0acef0022319e_9366/Believe_This_HEAT.RDY_Bra_Purple_GV5476_01_laydown.jpg",
+                "https://www.e-tennis.com/pub/media/catalog/product/cache/f5f3da80ad7b670245aea7e970662954/g/v/gv5476_basic.jpg",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOEnR98R7qW0_EyleiThgF1JvEBX_ECaWzq7K5M-RjZ2istZSoEtLOCpFuzUkgoj7vVV0&usqp=CAU",
+                "https://media.foot-store.com/catalog/product/cache/image/1800x/9df78eab33525d08d6e5fb8d27136e95/h/1/h11344_app_on-model_detail-1_white.jpg",
+            ],
+            name: "BELIEVE THIS HEAT.RDY BRA",
+            category: "Women Training",
+            price: 80.,
+            size: [32, 34, 36, 38],
+            color: [
+                "Black",
+            ],
+            rating: 4.6,
+            specifications: [
+                "High support with a compression fit",
+                "Round neck",
+                "Non-removable foam padding",
+                "Color: Black"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "1 N",
+                "Gender", "Women",
+                "Country of Origin", "Vietnam"
+            ],
+            gender: "women",
+            division: "clothing",
+            productType: "sportsWear",
+            brand: "performance",
+            collection: "clima",
+            sustainability: "sustainable",
+        },
+
+        {
+            img: [
+                "https://media.kohlsimg.com/is/image/kohls/3946274_Orbit_Violet_Black?wid=600&hei=600&op_sharpen=1",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/132e295fadd0454287a8aa9c010a1b68_9366/Ultimate_Bra_Black_FJ7283_01_laydown.jpg",
+                "https://i.ebayimg.com/images/g/ZJcAAOSwF2xj8UCJ/s-l400.jpg",
+                "https://dks.scene7.com/is/image/GolfGalaxy/19ADIWLTMTHGHSPPRAPUA_Black?qlt=70&wid=600&fmt=pjpeg",
+            ],
+            name: "ULTIMATE BRA UY",
+            category: "Women Training",
+            price: 85.00,
+            size: [32, 34, 36, 38],
+            color: [
+                "Crew Navy",
+            ],
+            rating: 4.6,
+            specifications: [
+                "High support with a compression fit",
+                "Round neck",
+                "Mesh back panel",
+                "Color: Crew Navy"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "1 N",
+                "Gender", "Women",
+                "Country of Origin", "Vietnam"
+            ],
+            gender: "women",
+            division: "clothing",
+            productType: "sportsWear",
+            brand: "originals",
+            collection: "clima",
+            sustainability: "vegan",
+
+        },
+
+        // Men's shoes part-1
+        {
+            img: [
+                "https://rukminim1.flixcart.com/image/300/300/kg9qbgw0-0/shoe/r/o/n/ew2425-6-adidas-ftwwht-cblack-original-imafwjzydyafyjdy.jpeg",
+                "https://rukminim2.flixcart.com/image/850/1000/kg9qbgw0-0/shoe/p/t/5/ew2426-6-adidas-legink-dovgry-gloora-original-imafwjp3y6qffjmt.jpeg?q=90",
+                "https://i.ytimg.com/vi/600L6sH2XZU/sddefault.jpg",
+                "https://rukminim2.flixcart.com/image/850/1000/kg5fzww0-0/shoe/d/7/w/ew2426-adidas-legink-dovgry-gloora-original-imafwg6z7gqmdhgw.jpeg?q=90"
+            ],
+            name: "UNIFACTOR SHOES",
+            category: "Men Running",
+            price: 120.00,
+            size: [7, 8, 9, 10],
+            color: [
+                "Night Marine",
+                "Night Sky",
+                "Stone"
+            ],
+            rating: 3.8,
+            specifications: [
+                "Mesh and synthetic upper",
+                "Comfortable textile lining",
+                "Durable rubber outsole",
+                "Color: Night Marine / Night Sky / Stone"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "2 N",
+                "Gender", "Men",
+                "Country of Origin", "India"
+            ],
+            gender: "men",
+            division: "shoes",
+            productType: "sportsShoes",
+            brand: "sportsInspired",
+            collection: "superNova",
+            sustainability: "colorWithCare",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/w_940,f_auto,q_auto/a758f18573f546f9a33dad66010ce91a_9366/GW0518_09_standard.jpg",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuEhQMFu4fT0qUR8VXsMN4-1HwoqI7XqNV0g_0lZZorvveTfQuVaLnQ7oxV_K4QKQeWNc&usqp=CAU",
+                "https://i.ebayimg.com/images/g/cKQAAOSwxoliTiun/s-l1200.webp",
+                "https://i.ytimg.com/vi/wVVJU8rRBlE/sddefault.jpg"
+            ],
+            name: "ZX 2K BOOST 2.0 SHOES",
+            category: "Men Running",
+            price: 120.00,
+            size: [7, 8, 9, 10],
+            color: [
+                "Crew Blue",
+                "Semi Solar Gold",
+                "Core Black"
+            ],
+            rating: 3.8,
+            specifications: [
+                "Lace closure",
+                "Rubber outsole",
+                "Mesh, TPU and neoprene upper",
+                "Color: Crew Blue / Semi Solar Gold / Core Black"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "2 N",
+                "Gender", "Men",
+                "Country of Origin", "Vietnam"
+            ],
+            gender: "men",
+            division: "shoes",
+            productType: "sneakers",
+            brand: "performance",
+            collection: "superNova",
+            sustainability: "sustainable",
+        },
+
+        {
+            img: [
+                "https://i.ebayimg.com/images/g/3koAAOSwblxlMgVB/s-l1600.jpg",
+                "https://www.gluestore.com.au/cdn/shop/products/120123-HR0322-04_1600x.jpg?v=1697149250",
+                "https://assets.adidas.com/images/w_940,f_auto,q_auto/b807dfe14b204016a542af48008c79b3_9366/HR0321_05_standard.jpg",
+                "https://assets.adidas.com/images/w_940,f_auto,q_auto/29a591bb601e45f09b55bbcfce3a91ef_9366/IE7453_04_standard.jpg"
+            ],
+            name: "ADVANTAGE SHOES",
+            category: "Men Sport Inspired",
+            price: 120.00,
+            size: [7, 8, 9, 10],
+            color: [
+                "Cloud White",
+                "Cloud White",
+                "Green",
+                "Pink"
+            ],
+            rating: 4,
+            specifications: [
+                "Regular fit",
+                "Cloudfoam Comfort sockliner",
+                "Lace closure",
+                "Color: Cloud White / Cloud White / Green"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "2 N",
+                "Gender", "Men",
+                "Country of Origin", "Indonesia"
+            ],
+            gender: "men",
+            division: "shoes",
+            productType: "sneakers",
+            brand: "sportsWear",
+            collection: "clima",
+            sustainability: "organicCotton",
+        },
+
+        {
+            img: [
+                "https://i.ebayimg.com/images/g/EQ0AAOSwUcBjDTsU/s-l1200.jpg",
+                "https://i.ebayimg.com/images/g/IqgAAOSw79hj9lTa/s-l1600.jpg",
+                "https://di2ponv0v5otw.cloudfront.net/posts/2023/09/22/650db8034bc6551e1ce6f931/m_650db80a932a8acfdc8ba118.jpg",
+                "https://rukminim1.flixcart.com/image/850/1000/l47cu4w0/shoe/g/c/v/-original-imagf5ghcdpfspq7.jpeg?q=90"
+            ],
+            name: "LITE RACER CLN SHOES",
+            category: "Men Sport Inspired",
+            price: 170.00,
+            size: [7, 8, 9, 10],
+            color: [
+                "Legend Earth",
+                "Core Black",
+                "Cloud White"
+            ],
+            rating: 4.6,
+            specifications: [
+                "Regular fit",
+                "Lace closure",
+                "Durable rubber outsole",
+                "Color: Legend Earth / Core Black / Cloud White"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "2 N",
+                "Gender", "Men",
+                "Country of Origin", "Myanmar"
+            ],
+            gender: "men",
+            division: "shoes",
+            productType: "sportsShoes",
+            brand: "sportsInspired",
+            collection: "clima",
+            sustainability: "vegan",
+        },
+
+        //Women's cloths - trackpants
+
+        {
+            img: [
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/2e4d51e1bba442b0b066ab7d00d7a1ce_9366/Marathon_20_Two-in-One_Shorts_Green_GC6652_01_laydown.jpg",
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/ccb919eec0cc44f09213ab650101e6d2_9366/Marathon_20_Two-in-One_Shorts_Black_FS9845_01_laydown.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/51975dccd75843eb8929ac800105ec29_9366/Marathon_20_Two-in-One_Shorts_Pink_GJ9921_01_laydown.jpg",
+                "https://www.directtennis.co.uk/images/extralarge/adi_FS9845.jpg",
+            ],
+            name: "MARATHON 20 TWO-IN-ONE SHORTS",
+            category: "Women Running",
+            price: 70.00,
+            size: [28, 30, 32, 34],
+            color: [
+                "Black",
+            ],
+            rating: 4.0,
+            specifications: [
+                "Drawcord on elastic waist",
+                "100% recycled polyester doubleknit",
+                "Stay-put running shorts",
+                "CColor: Black"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "1 N",
+                "Gender", "Women",
+                "Country of Origin", "Vietnam"
+            ],
+            gender: "women",
+            division: "clothing",
+            productType: "sportsWear",
+            brand: "sportsWear",
+            collection: "ultraBoost",
+            sustainability: "sustainable",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/w_940,f_auto,q_auto/53031240e82b47b0a301f37384c13271_9366/II3190_01_laydown.jpg",
+                "https://b.bflcdn.com/t_pm/f_auto,q_auto/products/23/11/4062062479800_BTM_1.JPG",
+                "https://assets.adidas.com/images/w_940,f_auto,q_auto/9b15e9537e2a4b1a85dff420070ec6ee_9366/II3190_23_hover_model.jpg",
+                "https://www.runner.com.eg/cdn/shop/files/Essentials_Logo_Allover_Print_Leggings_Black_HC9169_21_model_jpg.webp?v=1683891824",
+            ],
+            name: "UZX ADIDAS SPORTSWEAR ALLOVER PRINT LEGGINGS",
+            category: "Women Running",
+            price: 75.00,
+            size: [28, 30, 32, 34],
+            color: [
+                "Black",
+            ],
+            rating: 4.8,
+            specifications: [
+                "Drawcord on elastic waist",
+                "100% recycled polyester doubleknit",
+                "Stay-put running shorts",
+                "CColor: Black"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "1 N",
+                "Gender", "Women",
+                "Country of Origin", "Cambodia"
+            ],
+            gender: "women",
+            division: "clothing",
+            productType: "sportsWear",
+            brand: "originals",
+            collection: "clima",
+            sustainability: "organicCotton",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/ffd97827a77a4afeafb4ac84015377e9_9366/adidas_Sportswear_Allover_Print_Leggings_Black_GP9644_01_laydown.jpg",
+                "https://media.training-fit.com/catalog/product/cache/image/1800x/9df78eab33525d08d6e5fb8d27136e95/g/u/gu9696_app_photo_front-center_white.jpg",
+                "https://www.bestbuysoccer.com/cdn/shop/products/15206GT6809_grande.jpg?v=1685460056",
+                "https://classic.cdn.media.amplience.net/i/hibbett/0A528_0131_main1",
+            ],
+            name: "ADIDAS SPORTSWEAR ALLOVER PRINT LEGGINGS",
+            category: "Women Running",
+            price: 65.00,
+            size: [28, 30, 32, 34],
+            color: [
+                "Black",
+            ],
+            rating: 4.8,
+            specifications: [
+                "Drawcord on elastic waist",
+                "100% recycled polyester doubleknit",
+                "Stay-put running shorts",
+                "CColor: Black"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "1 N",
+                "Gender", "Women",
+                "Country of Origin", "Cambodia"
+            ],
+            gender: "women",
+            division: "clothing",
+            productType: "sportsWear",
+            brand: "sportsInspired",
+            collection: "adicolor",
+            sustainability: "vegan",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/a11dd89ad5314886bc79aa9d0175fc0f_9366/Believe_This_2.0_7-8_Tights_Black_FJ7187_01_laydown.jpg",
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/ed9230624254400d86cead0101675f7d_9366/Believe_This_2.0_Logo_7-8_Tights_Purple_GR8100_01_laydown.jpg",
+                "https://www.rebelsport.com.au/dw/image/v2/BBRV_PRD/on/demandware.static/-/Sites-srg-internal-master-catalog/default/dwc57de533/images/59237501/Rebel_59237501_black_hi-res.jpg?sw=1000&sh=1000&sm=fit&q=70",
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/960bba34a3da4f0fb49cacc300f57301_9366/Believe_This_7-8_Tights_Multicolor_GU1313_HM4.jpg",
+            ],
+            name: "BELIEVE THIS 7/8 TIGHTS",
+            category: "Women Training",
+            price: 80.00,
+            size: [28, 30, 32, 34],
+            color: [
+                "Multicolor",
+                "Black",
+                "White",
+            ],
+            rating: 4.6,
+            specifications: [
+                "Drawcord on elastic waist",
+                "100% recycled polyester doubleknit",
+                "Stay-put running shorts",
+                "Color: Black"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "1 N",
+                "Gender", "Women",
+                "Country of Origin", "Thailand"
+            ],
+            gender: "women",
+            division: "clothing",
+            productType: "sportsWear",
+            brand: "sportsWear",
+            collection: "clima",
+            sustainability: "colorWithCare",
+        },
+
+        //Men's shoes part-2
+        {
+            img: [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/dc04507ce9404c889a3eaba20126b242_9366/ASWEEMOVE_Shoes_Black_FW1676_01_standard.jpg",
+                "https://rukminim2.flixcart.com/image/850/1000/l4ei1e80/shoe/e/f/j/-original-imagfb9ugerejgau.jpeg?q=90",
+                "https://en-sa.sssports.com/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dw41e58dc5/sss/SSS2/A/D/F/W/1/SSS2_ADFW1676_4062059357487_2.jpg?sw=700&sh=700&sm=fit",
+                "https://i.ebayimg.com/images/g/bYEAAOSwcdJgzGwE/s-l1200.jpg"
+            ],
+            name: "ASWEEMOVE SHOES",
+            category: "Men Running",
+            price: 120.00,
+            size: [9, 10, 11, 12],
+            color: [
+                "Core Black",
+                "Cloud White",
+                "Core Black"
+            ],
+            rating: 4.6,
+            specifications: [
+                "Regular fit",
+                "Lace closure",
+                "Synthetic outsole",
+                "Color: Core Black / Cloud White / Core Black"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "2 N",
+                "Gender", "Men",
+                "Country of Origin", "Vietnam"
+            ],
+            gender: "men",
+            division: "shoes",
+            productType: "sneakers",
+            brand: "performance",
+            collection: "ultraBoost",
+            sustainability: "sustainable",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/60e1dbd34a5044c5ac4cabdb00c3fc43_9366/ASWEEMOVE_Shoes_Blue_FW1674_01_standard.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/01fbd27fcaba4d4cbc59aba300471943_9366/ASWEEMOVE_Shoes_Blue_FW1682_01_standard.jpg",
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/47bfabb204f94decbf88ab4f00e5cdbe_9366/ASWEEMOVE_Shoes_White_FW1677_01_standard.jpg",
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/7e50ac6e409d4276a9e4aba20126d490_9366/ASWEEMOVE_Shoes_Black_FW1676_05_standard.jpg"
+            ],
+            name: "ASWEMOVE SHOES",
+            category: "Men Running",
+            price: 120.00,
+            size: [6, 7, 8, 9, 10, 11, 12],
+            color: [
+                "Tech Indigo",
+                "Legend Ink",
+                "Scarlet"
+            ],
+            rating: 4.6,
+            specifications: [
+                "Regular fit",
+                "Lace closure",
+                "Synthetic outsole",
+                "Color: Tech Indigo / Legend Ink / Scarlet"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "2 N",
+                "Gender", "Men",
+                "Country of Origin", "Vietnam"
+            ],
+            gender: "men",
+            division: "shoes",
+            productType: "football",
+            brand: "sportsWear",
+            collection: "superNova",
+            sustainability: "colorWithCare",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/d798865c9b104fc4893cad9c00631ae3_9366/Unifactor_Shoes_Grey_EW2424_01_standard.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/86baf08880134b6cb77dad9c0063367b_9366/Unifactor_Shoes_Grey_EW2424_02_standard_hover.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/393a3dbf4a9a4385824cad9c00632a36_9366/Unifactor_Shoes_Grey_EW2424_04_standard.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/b9da2ad0542d40d798f6ad9c00631e9a_9366/Unifactor_Shoes_Grey_EW2424_05_standard.jpg"
+            ],
+            name: "UNIFACTOR SHOES UZ",
+            category: "Men Running",
+            price: 130.00,
+            size: [8, 9, 10, 11],
+            color: [
+                "Grey Six",
+                "Legacy Gold",
+            ],
+            rating: 3.8,
+            specifications: [
+                "Mesh and synthetic upper",
+                "Durable rubber outsole",
+                "Comfortable textile lining",
+                "Color: Grey Six / Legacy Gold"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "2 N",
+                "Gender", "Men",
+                "Country of Origin", "India"
+            ],
+            gender: "men",
+            division: "shoes",
+            productType: "sneakers",
+            brand: "sportsInspired",
+            collection: "adicolor",
+            sustainability: "organicCotton",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/63ef8d5fbbd44d1494a1ad8500e54a97_9366/Kollide_Shoes_Grey_EW2516_01_standard.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/b51a39a025ef460db377ad8500e5458c_9366/Kollide_Shoes_Grey_EW2516_02_standard_hover.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/4247b2c786224e40ad98ad8500e52056_9366/Kollide_Shoes_Grey_EW2516_04_standard.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/34a38edcbf284a7c9c52ad8500e52aa1_9366/Kollide_Shoes_Grey_EW2516_05_standard.jpg"
+            ],
+            name: "KOLLIDE SHOES",
+            category: "Men Running",
+            price: 130.00,
+            size: [6, 7, 8, 9],
+            color: [
+                "Grey Six",
+                "Core Black",
+                "Stone"
+            ],
+            rating: 5.0,
+            specifications: [
+                "Mesh upper",
+                "Cushioned Cloudfoam midsole",
+                "Rubber in key areas for enhanced traction",
+                "Color: Grey Six / Core Black / Stone"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "2 N",
+                "Gender", "Men",
+                "Country of Origin", "India"
+            ],
+            gender: "men",
+            division: "shoes",
+            productType: "football",
+            brand: "performance",
+            collection: "superNova",
+            sustainability: "colorWithCare",
+        },
+
+        // Men's Pants
+        {
+            img: [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/1c2febd0cacc4d6aa958ab8a00ff0a30_9366/ADICOLOR_CLASSICS_PRIMEBLUE_SST_TRACK_PANTS_Black_GF0210_01_laydown.jpg",
+                "https://www.nutmegltd.com/web/image/product.image/11/image_1024/GN3514?unique=1f74d36",
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/22fb9a70de654098b2abac84008f728c_9366/ADICOLOR_CLASSICS_PRIMEBLUE_SST_TRACK_PANTS_Blue_GN3514_01_laydown.jpg",
+                "https://static.footshop.com/img/p/5/1/7/7/2/3/517723-full_product.jpg",
+            ],
+            name: "ADICOLOR CLASSICS PRIMEBLUE SST TRACK PANTS",
+            category: "Men Originals",
+            price: 85.00,
+            size: [32, 34, 36, 38],
+            color: [
+                "Red",
+                "Grey"
+            ],
+            rating: 4.2,
+            specifications: [
+                "Slim fit",
+                "Engineered for movement",
+                "Doubleknit",
+                "Color: Red / White"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "1 N",
+                "Gender", "Men",
+                "Country of Origin", "Cambodia"
+            ],
+            gender: "men",
+            division: "clothing",
+            productType: "sportsWear",
+            brand: "originals",
+            collection: "superNova",
+            sustainability: "organicCotton",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8ab5375db758441688e3ac5c000cbdd1_9366/AEROREADY_3-Stripes_Flow_Motion_Pants_Blue_GL1682_01_laydown.jpg",
+                "https://sa.kickscrew.com/cdn/shop/products/1_657ec8f3-913c-4506-9b6e-28ff6061942f_540x.jpg?v=1694140791",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Gp9sc8fMYPVbdRzW_lqSNjOlLNeBka33S4VpRcimDlekbwC5_nmrccpDH3VwLEkvFXE&usqp=CAU",
+                "https://gambol.in/cdn/shop/products/GL1682-7_1400x.jpg?v=1633418134",
+            ],
+            name: "AEROREADY 3-STRIPES FLOW MOTION PANTS",
+            category: "Men Originals",
+            price: 80,
+            size: [32, 34, 36, 38],
+            color: [
+                "Crew Navy",
+                "Black",
+                "Ash"
+            ],
+            rating: 4.6,
+            specifications: [
+                "Slim fit",
+                "Engineered for movement",
+                "Doubleknit",
+                "Color: Crew Navy"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "1 N",
+                "Gender", "Men",
+                "Country of Origin", "Philippines"
+            ],
+            gender: "men",
+            division: "clothing",
+            productType: "sportsWear",
+            brand: "sportsInspired",
+            collection: "ultraBoost",
+            sustainability: "colorWithCare",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/d9fbfbd5489a416f9d2dacc300c542e5_9366/adidas_SPRT_Supersport_Woven_Track_Shorts_Black_GN2467_01_laydown.jpg",
+                "https://www.kickz.com/on/demandware.static/-/Sites-kickz-master-catalog/default/dw226befd2/images/large/adidas_originals-SPRT_FS_TRACKSHORT-Black-1.jpg",
+                "https://i.ebayimg.com/images/g/hpEAAOSwUqpg3kfw/s-l400.jpg",
+                "https://media.6media.me/media/catalog/product/g/n/gn2463-1.jpg",
+            ],
+            name: "ADIDAS SPRT SUPERSPORT WOVEN TRACK SHORTS",
+            category: "Men Originals",
+            price: 70.00,
+            size: [32, 34, 36, 38],
+            color: [
+                "Black"
+            ],
+            rating: 4.8,
+            specifications: [
+                "Regular fit",
+                "Engineered for movement",
+                "70% polyester, 30% recycled polyester plain weave",
+                "Color: Black"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "1 N",
+                "Gender", "Men",
+                "Country of Origin", "Vietnam"
+            ],
+            gender: "men",
+            division: "clothing",
+            productType: "sportsWear",
+            brand: "sportsWear",
+            collection: "ultraBoost",
+            sustainability: "vegan",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/de8e49b4ec264b6c97c1ae8c00db3051_9366/Adicolor_Parley_Sweat_Pants_Black_HN7028_21_model.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/6adc4e3647d0465daa1eaf2c01041e69_9366/Adicolor_Classics_SST_Track_Pants_Black_IA4791_21_model.jpg",
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/0b106be0fa784731b291a494794744fe_9366/Adicolor_Classics_SST_Track_Pants_Black_IL2488_21_model.jpg",
+                "https://images.asos-media.com/products/adidas-originals-adicolor-3-stripe-cargo-sweatpants-in-black/202171043-4?$n_640w$&wid=513&fit=constrain",
+            ],
+            name: "ADICOLOR SWEAT PANTS",
+            category: "Men Originals",
+            price: 100.00,
+            size: [32, 34, 36, 38],
+            color: [
+                "Hazy Rose"
+            ],
+            rating: 3.4,
+            specifications: [
+                "Regular fit",
+                "French terry",
+                "00% cotton French terry",
+                "Color: Hazy Rose"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "1 N",
+                "Gender", "Men",
+                "Country of Origin", "Vietnam"
+            ],
+            gender: "men",
+            division: "clothing",
+            productType: "sportsWear",
+            brand: "sportsInspired",
+            collection: "clima",
+            sustainability: "organicCotton",
+        },
+
+        //Women shoes
+        {
+            img: [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/6161d010750f4a0b8e07ab4a00a10991_9366/Ultimashow_Shoes_Black_FX3636_01_standard.jpg",
+                "https://assets.adidas.com/images/w_940,f_auto,q_auto/636e13a768c64ec6b9c4ab5000fbbf0e_9366/FX3631_01_standard.jpg",
+                "https://runners.ae/cdn/shop/products/ADIDAS-ULTIMASHOW-SHOES-FOR-WOMEN-SKY-TINT-FX3640_1.jpg?v=1675854813",
+                "https://i.ebayimg.com/images/g/ZvwAAOSwvRpiWgfn/s-l1200.jpg",
+            ],
+            name: "ULTIMASHOW SHOES",
+            category: "Women Running",
+            price: 110.00,
+            size: [5, 6, 7, 8],
+            color: [
+                "Core Black",
+                "Core Blue",
+                "Cloud White"
+            ],
+            rating: 4.8,
+            specifications: [
+                "Mesh and synthetic upper",
+                "Comfortable textile lining",
+                "Durable rubber outsole",
+                "Color: Core Black / Core Blue / Cloud White"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "2 N",
+                "Gender", "Women",
+                "Country of Origin", "Vietnam"
+            ],
+            gender: "women",
+            division: "shoes",
+            productType: "sportsShoes",
+            brand: "sportsWear",
+            collection: "ultraBoost",
+            sustainability: "sustainable",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/fd7424d087c64c038704ac84012e06a5_9366/Ultraboost_5.0_DNA_Shoes_White_GW5125_01_standard.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/957bf1e16ab74f868ce3ad32015ea6f7_9366/Ultraboost_5.0_DNA_Shoes_White_GW5125_011_hover_standard.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/fe4a5358bc6b4499beacac84012db926_9366/Ultraboost_5.0_DNA_Shoes_White_GW5125_02_standard.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/40f98c319f7849eeb1c7ac84012b0cfa_9366/Ultraboost_5.0_DNA_Shoes_White_GW5125_04_standard.jpg",
+            ],
+            name: "ULTRABOOST 5.0 DNA SHOES",
+            category: "Women Running",
+            price: 110.00,
+            size: [6, 7, 8, 9],
+            color: [
+                "Off White",
+                "Off White",
+                "Light Purple"
+            ],
+            rating: 4.6,
+            specifications: [
+                "Sock-like fit",
+                "Textile lining and EVA midsole",
+                "Supportive heel counter",
+                "Color: Off White / Off White / Light Purple"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "2 N",
+                "Gender", "Women",
+                "Country of Origin", "China"
+            ],
+            gender: "women",
+            division: "shoes",
+            productType: "sportsShoes",
+            brand: "performance",
+            collection: "superNova",
+            sustainability: "colorWithCare",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/0a49a99062064231ba8dad3300fc7f5d_9366/X_Speedflow.4_Indoor_Boots_Red_FY3346_01_standard.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/a3327348621645909a1aad3300fc89f2_9366/X_Speedflow.4_Indoor_Boots_Red_FY3346_02_standard_hover.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/d163ef7eac324f09a6caad3300fc956c_9366/X_Speedflow.4_Indoor_Boots_Red_FY3346_04_standard.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/ddc511cd28b04950bb94ad3300fc9b96_9366/X_Speedflow.4_Indoor_Boots_Red_FY3346_05_standard.jpg",
+            ],
+            name: "X SPEEDFLOW.4 INDOOR BOOTS",
+            category: "Football",
+            price: 120.00,
+            size: [7, 8, 9, 10],
+            color: [
+                "Core Black",
+                "Red",
+                "Solar Red"
+            ],
+            rating: 5.0,
+            specifications: [
+                "Lace closure",
+                "Coated textile upper",
+                "Rubber outsole for indoor surfaces",
+                "Color: Red / Core Black / Solar Red"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "2 N",
+                "Gender", "Women",
+                "Country of Origin", "Cambodia"
+            ],
+            gender: "women",
+            division: "shoes",
+            productType: "football",
+            brand: "sportsInspired",
+            collection: "ultraBoost",
+            sustainability: "vegan",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/685f0c5417224bd3a7cfaba301261e83_9366/Superstar_Shoes_White_FW2502_01_standard.jpg",
+                "https://media.finishline.com/i/finishline/EG4958_100_P2?$default$&w=670&h=670&bg=rgb(237,237,237)",
+                "https://imagescdn.thecollective.in/img/app/product/5/523499-3936695.jpg",
+                "https://scene7.zumiez.com/is/image/zumiez/product_main_medium/adidas-Superstar-ADV-Black-%26-White-Shoes-_353870-front-US.jpg",
+            ],
+            name: "SUPERSTAR SHOES",
+            category: "Women Originals",
+            price: 200.00,
+            size: [6, 7, 8, 9],
+            color: [
+                "Cloud White",
+                "Signal Pink",
+                "Shock Purple"
+            ],
+            rating: 5.0,
+            specifications: [
+                "Regular fit",
+                "Rubber outsole",
+                "Leather upper",
+                "Color: Cloud White / Signal Pink / Shock Purple"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "2 N",
+                "Gender", "Women",
+                "Country of Origin", "Indonesia"
+            ],
+            gender: "women",
+            division: "shoes",
+            productType: "football",
+            brand: "sportsInspired",
+            collection: "ultraBoost",
+            sustainability: "vegan",
+        },
+
+        //Accessories
+        {
+            img: [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/30689ff7b9e542b6a46faafc00fd26bd_9366/Predator_20_Training_Gloves_Black_FH7294_01_standard.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/7a0c593761ec428cab16aafc00fd365e_9366/Predator_20_Training_Gloves_Black_FH7294_41_detail_hover.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/71e7bab113d549d1b258aafc01005140_9366/Predator_20_Training_Gloves_Black_FH7294_42_detail.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/9509ebbee5d043879d33aafc0100594e_9366/Predator_20_Training_Gloves_Black_FH7294_43_detail.jpg",
+            ],
+            name: "PREDATOR 20 TRAINING GLOVES",
+            category: "Football",
+            price: 120,
+            size: [4, 5, 6, 7],
+            color: [
+                "Black",
+                "Active Red",
+            ],
+            rating: 3.6,
+            specifications: [
+                "Body: 70% polyurethane, 30% polyester",
+                "Lightweight half-wrap wrist strap",
+                "Football goalkeeper gloves",
+                "Color: Black / Active Red"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "1 N",
+                "Gender", "Kids Unisex",
+                "Country of Origin", "Vietnam"
+            ],
+            gender: "kids",
+            division: "accessories",
+            productType: "football",
+            brand: "originals",
+            collection: "superNova",
+            sustainability: "vegan",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/37f69f2a03fa4897b526ac8900dff31d_9366/X_Training_Goalkeeper_Gloves_Yellow_GK3513_01_standard.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/bea01f55f362419dac84ac8900c609aa_9366/X_Training_Goalkeeper_Gloves_Yellow_GK3513_41_detail_hover.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/37f69f2a03fa4897b526ac8900dff31d_9366/X_Training_Goalkeeper_Gloves_Yellow_GK3513_01_standard.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/1e427fc2d64243da820fac8900c6124f_9366/X_Training_Goalkeeper_Gloves_Yellow_GK3513_42_detail.jpg",
+            ],
+            name: "X TRAINING GOALKEEPER GLOVES",
+            category: "Football",
+            price: 120,
+            size: [4, 5, 6, 7],
+            color: [
+                "Solar Yellow",
+                "Black",
+            ],
+            rating: 3.9,
+            specifications: [
+                "Body: 70% polyurethane, 30% polyester",
+                "Lightweight half-wrap wrist strap",
+                "Football goalkeeper gloves",
+                "Color: Solar Yellow / Black"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "1 N",
+                "Gender", "Kids Unisex",
+                "Country of Origin", "Tunisia"
+            ],
+            gender: "kids",
+            division: "accessories",
+            productType: "football",
+            brand: "originals",
+            collection: "adicolor",
+            sustainability: "sustainable",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/c45479b251484031836aaca1002bea11_9366/Prime_Backpack_White_EX6951_01_standard.jpg",
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/abe3a78ccfe34bacb6d0ad5600ee3f3a_9366/Adicolor_Backpack_Black_H35596_01_standard.jpg",
+                "https://www.lifestylesports.com/dw/image/v2/BCDN_PRD/on/demandware.static/-/Sites-LSS_eCommerce_Master/default/dw1222803c/images/90146222xlarge.jpg?sw=530",
+                "https://www.lifestylesports.com/dw/image/v2/BCDN_PRD/on/demandware.static/-/Sites-LSS_eCommerce_Master/default/dwc8eda0c2/images/90147913xlarge.jpg?sw=530",
+            ],
+            name: "BACKPACK",
+            category: "Kids Unisex Training",
+            price: 90,
+            size: [4, 5, 6, 7],
+            color: [
+                "Legend Ink",
+                "White",
+                "Active Gold",
+            ],
+            rating: 3.9,
+            specifications: [
+                "Dimensions: 16 cm x 32 cm x 44 cm",
+                "Internal lined sleeve",
+                "Side compression straps",
+                "Color: Legend Ink / White / Active Gold"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "1 N",
+                "Gender", "Kids Unisex",
+                "Country of Origin", "India"
+            ],
+            gender: "kids",
+            division: "accessories",
+            productType: "sportsWear",
+            brand: "originals",
+            collection: "adicolor",
+            sustainability: "organicCotton",
+        },
+
+        {
+            img: [
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/979e097a987341aab07bac09010533a1_9366/Face_Covers_3-Pack_M-L_Black_H08837_08_laydown.jpg",
+                "https://assets.adidas.com/images/w_600,f_auto,q_auto/dac2d6bf60454f75bc7fac6f0110fb1f_9366/Face_Covers_3-Pack_M-L_Multicolor_HB7854_08_laydown.jpg",
+                "https://i5.walmartimages.com/asr/a76d3cac-538b-4034-b208-ca01b18d2529.fe66b4c5ab05b629647db81c7126b407.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrB6OU1i_pXFy822pA3ybE4rGCz6TrTGBauA&usqp=CAU"
+            ],
+            name: "FACE COVERS 3-PACK M/L",
+            category: "Men Sport Inspired",
+            price: 25,
+            size: [7, 8, 9, 10],
+            color: ["Black"],
+            rating: 4.5,
+            specifications: [
+                "Dimensions: 15.25 cm x 17 cm",
+                "Washable for daily use",
+                "Color: Black",
+                "Tight fit for coverage"
+            ],
+            details: [
+                "Attribute", "Value",
+                "Net Quantity", "3 N",
+                "Gender", "Men",
+                "Country of Origin", "Vietnam"
+            ],
+            gender: "men",
+            division: "accessories",
+            productType: "sportsWear",
+            brand: "originals",
+            collection: "adicolor",
+            sustainability: "sustainable",
+        },
+    ]
+
+    let parent = document.getElementById("parent");
+
+    let newProductData = [];
+
+    let totalProductsCount = document.getElementById("totalProductsCount");
+    totalProductsCount.textContent = "[" + data.length + "]";
+
+    //Product display Function
+    function showProducts(d) {
+
+        parent.innerHTML = null;
+
+        d.forEach(function (product) {
+
+            let box = document.createElement("div");
+
+            let img = document.createElement("img");
+            img.src = product.img[0];
+
+            img.addEventListener("mouseenter", imageswitch);
+            function imageswitch() {
+                img.src = product.img[1];
+            }
+
+            img.addEventListener("mouseleave", imageback);
+            function imageback() {
+                img.src = product.img[0];
+            }
+
+            let price = document.createElement("p");
+            price.textContent = "GH₵ " + product.price + ".00";
+            price.setAttribute("class", "priceDisplay");
+
+            let name = document.createElement("p");
+            name.textContent = product.name;
+            name.setAttribute("class", "nameSection");
+
+            let category = document.createElement("p");
+            category.textContent = product.category;
+            category.setAttribute("class", "categorySection");
+
+
+            let color = document.createElement("p");
+            color.textContent = product.color.length + " colours";
+            color.setAttribute("class", "colorSection");
+
+            box.append(img, price, name, category, color);
+
+            box.onclick = function () {
+                productDetails(product)
+            }
+
+            parent.append(box);
+        });
+    }
+    showProducts(data);
+
+    if (localStorage.getItem("productDetails") == null) {
+        localStorage.setItem("productDetails", JSON.stringify([]));
+    }
+
+    //Local Storage data access Function
+    function productDetails(p) {
+
+        var productPage = JSON.parse(localStorage.getItem("productDetails"));
+
+        productPage = [];
+
+        productPage.push(p);
+
+        localStorage.setItem("productDetails", JSON.stringify(productPage));
+
+        window.location.href = "adidas_productDescription.html";
+    }
+
+
+    //Clear Filter Function
+    function clearFilter() {
+        delete newProductData;
+        location.reload();
+    }
+
+    function showSortFilter(arr) {
+
+        let priceFilter = document.getElementById("priceFilter");
+
+        for (let i = 0; i < priceFilter.length; i++) {
+
+            if (priceFilter.value == "low") {
+
+                //Sort Low to High Function
+                function sortLH() {
+                    let array = arr.sort((a, b) => a.price - b.price);
+                    showProducts(array);
+                }
+                sortLH();
+
+            } else if (priceFilter.value == "high") {
+
+                //Sort High to Low Function
+                function sortHL() {
+                    let array = arr.sort((a, b) => b.price - a.price);
+                    showProducts(array);
+                }
+                sortHL();
+            }
+        }
+
+    }
+
+    //Price sort Function
+    function priceSortFilter() {
+
+        if (newProductData.length != 0) {
+            showSortFilter(newProductData);
+        }
+        else if (newProductData.length == 0) {
+            showSortFilter(data);
+        }
+
+    }
+
+    // Gender Filter Function
+    function showGender() {
+
+        var gender = document.getElementById("genderFilter").value;
+
+        for (let i = 0; i < gender.length; i++) {
+            //Step-1: Check if the newProductData array is empty
+            if (newProductData.length === 0) {
+
+                if (gender == "men") {
+                    let genderArrayMen = data.filter(function (element) {
+                        return (element.gender == "men");
+                    });
+                    newProductData = [...genderArrayMen];
+                    showProducts(genderArrayMen);
+                }
+
+                if (gender == "women") {
+                    let genderArrayWomen = data.filter(function (element) {
+                        newProductData.push(element.gender == "women");
+                        return (element.gender == "women");
+                    });
+                    newProductData = [...genderArrayWomen];
+                    showProducts(genderArrayWomen);
+                }
+
+                if (gender == "kids") {
+                    let genderArrayKids = data.filter(function (element) {
+                        newProductData.push(element.gender == "kids");
+                        return (element.gender == "kids");
+                    });
+                    newProductData = [...genderArrayKids];
+                    showProducts(genderArrayKids);
+                }
+
+            } else if (newProductData.length > 0) {
+
+                if (gender == "men") {
+                    let genderArrayMen = newProductData.filter(function (element) {
+                        return (element.gender == "men");
+                    });
+                    showProducts(genderArrayMen);
+                }
+
+                if (gender == "women") {
+                    let genderArrayWomen = newProductData.filter(function (element) {
+                        return (element.gender == "women");
+                    });
+                    showProducts(genderArrayWomen);
+                }
+
+                if (gender == "kids") {
+                    let genderArrayKids = newProductData.filter(function (element) {
+                        return (element.gender == "kids");
+                    });
+                    showProducts(genderArrayKids);
+                }
+            }
+        }
+    }
+
+    // Division Filter Function
+    function showDivision() {
+
+        var division = document.getElementById("divisionFilter").value;
+
+        for (let i = 0; i < division.length; i++) {
+
+            if (newProductData.length === 0) {
+
+                if (division == "clothing") {
+                    let divisionClothing = data.filter(function (element) {
+                        return (element.division == "clothing");
+                    });
+                    newProductData = [...divisionClothing];
+                    showProducts(divisionClothing);
+                }
+
+                if (division == "shoes") {
+                    let divisionShoes = data.filter(function (element) {
+                        return (element.division == "shoes");
+                    });
+                    newProductData = [...divisionShoes];
+                    showProducts(divisionShoes);
+                }
+
+                if (division == "accessories") {
+                    let divisionAccessories = data.filter(function (element) {
+                        return (element.division == "accessories");
+                    });
+                    newProductData = [...divisionAccessories];
+                    showProducts(divisionAccessories);
+                }
+
+            } else if (newProductData.length > 0) {
+
+                if (division == "clothing") {
+                    let divisionClothing = newProductData.filter(function (element) {
+                        return (element.division == "clothing");
+                    });
+                    showProducts(divisionClothing);
+                }
+
+                if (division == "shoes") {
+                    let divisionShoes = newProductData.filter(function (element) {
+                        return (element.division == "shoes");
+                    });
+                    showProducts(divisionShoes);
+                }
+
+                if (division == "accessories") {
+                    let divisionAccessories = newProductData.filter(function (element) {
+                        return (element.division == "accessories");
+                    });
+                    showProducts(divisionAccessories);
+                }
+            }
+        }
+    }
+
+    // Product Type Filter Function
+    function showProductType() {
+
+        var productType = document.getElementById("productType").value;
+
+        for (let i = 0; i < productType.length; i++) {
+
+            if (newProductData.length === 0) {
+
+                if (productType == "sneakers") {
+                    let productTypeSneakers = data.filter(function (element) {
+                        return (element.productType == "sneakers");
+                    });
+                    newProductData = [...productTypeSneakers];
+                    showProducts(productTypeSneakers);
+                }
+
+                if (productType == "football") {
+                    let productTypeFootball = data.filter(function (element) {
+                        return (element.productType == "football");
+                    });
+                    newProductData = [...productTypeFootball];
+                    showProducts(productTypeFootball);
+                }
+
+                if (productType == "sportsShoes") {
+                    let productTypeSportsShoes = data.filter(function (element) {
+                        return (element.productType == "sportsShoes");
+                    });
+                    newProductData = [...productTypeSportsShoes];
+                    showProducts(productTypeSportsShoes);
+                }
+
+                if (productType == "Tshirts") {
+                    let productTypeTshirts = data.filter(function (element) {
+                        return (element.productType == "Tshirts");
+                    });
+                    newProductData = [...productTypeTshirts];
+                    showProducts(productTypeTshirts);
+                }
+
+                if (productType == "sportsWear") {
+                    let productTypeSportsWear = data.filter(function (element) {
+                        return (element.productType == "sportsWear");
+                    });
+                    newProductData = [...productTypeSportsWear];
+                    showProducts(productTypeSportsWear);
+                }
+
+            } else if (newProductData.length > 0) {
+
+                if (productType == "sneakers") {
+                    let productTypeSneakers = newProductData.filter(function (element) {
+                        return (element.productType == "sneakers");
+                    });
+                    showProducts(productTypeSneakers);
+                }
+
+                if (productType == "football") {
+                    let productTypeFootball = newProductData.filter(function (element) {
+                        return (element.productType == "football");
+                    });
+                    showProducts(productTypeFootball);
+                }
+
+                if (productType == "sportsShoes") {
+                    let productTypeSportsShoes = newProductData.filter(function (element) {
+                        return (element.productType == "sportsShoes");
+                    });
+                    showProducts(productTypeSportsShoes);
+                }
+
+                if (productType == "Tshirts") {
+                    let productTypeTshirts = newProductData.filter(function (element) {
+                        return (element.productType == "Tshirts");
+                    });
+                    showProducts(productTypeTshirts);
+                }
+
+                if (productType == "sportsWear") {
+                    let productTypeSportsWear = newProductData.filter(function (element) {
+                        return (element.productType == "sportsWear");
+                    });
+                    showProducts(productTypeSportsWear);
+                }
+            }
+        }
+    }
+
+
+    // Brand Filter Function
+    function showBrand() {
+
+        var brand = document.getElementById("brand").value;
+
+        for (let i = 0; i < brand.length; i++) {
+
+            if (newProductData.length === 0) {
+
+                if (brand == "performance") {
+                    let brandPerformance = data.filter(function (element) {
+                        return (element.brand == "performance");
+                    });
+                    newProductData = [...brandPerformance];
+                    showProducts(brandPerformance);
+                }
+
+                if (brand == "originals") {
+                    let brandOriginals = data.filter(function (element) {
+                        return (element.brand == "originals");
+                    });
+                    newProductData = [...brandOriginals];
+                    showProducts(brandOriginals);
+                }
+
+                if (brand == "sportsInspired") {
+                    let brandSportsInspired = data.filter(function (element) {
+                        return (element.brand == "sportsInspired");
+                    });
+                    newProductData = [...brandSportsInspired];
+                    showProducts(brandSportsInspired);
+                }
+
+                if (brand == "sportsWear") {
+                    let brandSportsWear = data.filter(function (element) {
+                        return (element.brand == "sportsWear");
+                    });
+                    newProductData = [...brandSportsWear];
+                    showProducts(brandSportsWear);
+                }
+
+            } else if (newProductData.length > 0) {
+
+                if (brand == "performance") {
+                    let brandPerformance = newProductData.filter(function (element) {
+                        return (element.brand == "performance");
+                    });
+                    showProducts(brandPerformance);
+                }
+
+                if (brand == "originals") {
+                    let brandOriginals = newProductData.filter(function (element) {
+                        return (element.brand == "originals");
+                    });
+                    showProducts(brandOriginals);
+                }
+
+                if (brand == "sportsInspired") {
+                    let brandSportsInspired = newProductData.filter(function (element) {
+                        return (element.brand == "sportsInspired");
+                    });
+                    showProducts(brandSportsInspired);
+                }
+
+                if (brand == "sportsWear") {
+                    let brandSportsWear = newProductData.filter(function (element) {
+                        return (element.brand == "sportsWear");
+                    });
+                    showProducts(brandSportsWear);
+                }
+
+            }
+        }
+    }
+
+    // Collection Filter Function
+    function showCollection() {
+
+        var collection = document.getElementById("collection").value;
+
+        for (let i = 0; i < collection.length; i++) {
+
+            if (newProductData.length === 0) {
+
+                if (collection == "clima") {
+                    let collectionClima = data.filter(function (element) {
+                        return (element.collection == "clima");
+                    });
+                    newProductData = [...collectionClima];
+                    showProducts(collectionClima);
+                }
+
+                if (collection == "adicolor") {
+                    let collectionAdicolor = data.filter(function (element) {
+                        return (element.collection == "adicolor");
+                    });
+                    newProductData = [...collectionAdicolor];
+                    showProducts(collectionAdicolor);
+                }
+
+                if (collection == "ultraBoost") {
+                    let collectionUltraBoost = data.filter(function (element) {
+                        return (element.collection == "ultraBoost");
+                    });
+                    newProductData = [...collectionUltraBoost];
+                    showProducts(collectionUltraBoost);
+                }
+
+                if (collection == "superNova") {
+                    let collectionSuperNova = data.filter(function (element) {
+                        return (element.collection == "superNova");
+                    });
+                    newProductData = [...collectionSuperNova];
+                    showProducts(collectionSuperNova);
+                }
+
+            } else if (newProductData.length > 0) {
+
+                if (collection == "clima") {
+                    let collectionClima = newProductData.filter(function (element) {
+                        return (element.collection == "clima");
+                    });
+                    showProducts(collectionClima);
+                }
+
+                if (collection == "adicolor") {
+                    let collectionAdicolor = newProductData.filter(function (element) {
+                        return (element.collection == "adicolor");
+                    });
+                    showProducts(collectionAdicolor);
+                }
+
+                if (collection == "ultraBoost") {
+                    let collectionUltraBoost = newProductData.filter(function (element) {
+                        return (element.collection == "ultraBoost");
+                    });
+                    showProducts(collectionUltraBoost);
+                }
+
+                if (collection == "superNova") {
+                    let collectionSuperNova = newProductData.filter(function (element) {
+                        return (element.collection == "superNova");
+                    });
+                    showProducts(collectionSuperNova);
+                }
+            }
+        }
+    }
+
+    //Sustainability Filter Function
+    function showSustainability() {
+
+        var sustainability = document.getElementById("sustainability").value;
+
+        for (let i = 0; i < sustainability.length; i++) {
+
+            if (newProductData.length === 0) {
+
+                if (sustainability == "sustainable") {
+                    let sustainabilitySustainable = data.filter(function (element) {
+                        return (element.sustainability == "sustainable");
+                    });
+                    newProductData = [...sustainabilitySustainable];
+                    showProducts(sustainabilitySustainable);
+                }
+
+                if (sustainability == "vegan") {
+                    let sustainabilityVegan = data.filter(function (element) {
+                        return (element.sustainability == "vegan");
+                    });
+                    newProductData = [...sustainabilityVegan];
+                    showProducts(sustainabilityVegan);
+                }
+
+                if (sustainability == "organicCotton") {
+                    let sustainabilityOrganicCotton = data.filter(function (element) {
+                        return (element.sustainability == "organicCotton");
+                    });
+                    newProductData = [...sustainabilityOrganicCotton];
+                    showProducts(sustainabilityOrganicCotton);
+                }
+
+                if (sustainability == "colorWithCare") {
+                    let sustainabilityColorWithCare = data.filter(function (element) {
+                        return (element.sustainability == "colorWithCare");
+                    });
+                    newProductData = [...sustainabilityColorWithCare];
+                    showProducts(sustainabilityColorWithCare);
+                }
+
+            } else if (newProductData.length > 0) {
+
+                if (sustainability == "sustainable") {
+                    let sustainabilitySustainable = newProductData.filter(function (element) {
+                        return (element.sustainability == "sustainable");
+                    });
+                    showProducts(sustainabilitySustainable);
+                }
+
+                if (sustainability == "vegan") {
+                    let sustainabilityVegan = newProductData.filter(function (element) {
+                        return (element.sustainability == "vegan");
+                    });
+                    showProducts(sustainabilityVegan);
+                }
+
+                if (sustainability == "organicCotton") {
+                    let sustainabilityOrganicCotton = newProductData.filter(function (element) {
+                        return (element.sustainability == "organicCotton");
+                    });
+                    showProducts(sustainabilityOrganicCotton);
+                }
+
+                if (sustainability == "colorWithCare") {
+                    let sustainabilityColorWithCare = newProductData.filter(function (element) {
+                        return (element.sustainability == "colorWithCare");
+                    });
+                    showProducts(sustainabilityColorWithCare);
+                }
+            }
+        }
+    }
+
+    //Top Header slide show function
+    function topHeaderSlideShow() {
+
+        let topHeader = document.getElementById("topHeader");
+
+        let arrayLines = [
+            "FREE DELIVERY FOR ALL ORDERS NOW",
+            "FREE RETURNS",
+            "SIGN UP & GET 15% OFF"
+        ];
+
+        let x = window.matchMedia("(max-width: 960px)")
+
+        function showTextInHeader(x) {
+
+            if (x.matches) {
+
+                let p = document.createElement("p");
+                p.textContent = arrayLines[0];
+                p.setAttribute("class", "hearderSlideContent");
+                topHeader.append(p);
+                let c = 0;
+
+                setInterval(function () {
+                    if (c == arrayLines.length) {
+                        c = 0;
+                    }
+                    p.textContent = arrayLines[c];
+                    c++;
+
+                }, 3000);
+            }
+        }
+        showTextInHeader(x)
+        x.addListener(showTextInHeader)
+    }
+    topHeaderSlideShow();
+
+</script>
